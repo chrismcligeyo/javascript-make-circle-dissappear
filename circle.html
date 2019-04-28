@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dissappearing Circles</title>
+    <style type ="text/css">
+    
+    .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 50px;
+       float:left;
+    }
+
+    #red_circle {
+        background-color:red;
+    }    
+     
+     #blue_circle {
+         background-color:blue;
+    }    
+    
+     #yellow_circle {
+         background-color:yellow;
+    }    
+    
+    </style>
+</head>
+<body>
+   <div class="circle" id="red_circle"></div>
+   <div class="circle" id="blue_circle"></div>
+   <div class="circle" id="yellow_circle"></div>
+
+
+    <script type="text/javascript">
+    
+const red_circle =  document.querySelector("#red_circle");
+const blue_circle =  document.querySelector("#blue_circle");    
+const yellow_circle =  document.querySelector("#yellow_circle");
+
+
+
+function loadallEventListeners(){
+    
+    red_circle.addEventListener("click", redCircleDissappear);
+    blue_circle.addEventListener("click", blueCircleDissappear);
+    yellow_circle.addEventListener("click", yellowCircleDissappear);
+}
+
+function redCircleDissappear(){
+ red_circle.style.display = "none"; 
+  
+}
+function blueCircleDissappear(){
+ blue_circle.style.display = "none"; 
+  
+}
+
+ function yellowCircleDissappear(){
+ yellow_circle.style.display = "none"; 
+  
+}   
+loadallEventListeners();
+    </script>
+
+</body>
+</html>
